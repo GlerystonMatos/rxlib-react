@@ -1,0 +1,25 @@
+{
+  "name": "rxlib",
+  "version": "1.0.0",
+  "description": "Biblioteca de componente React para criação de projetos.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rxcrud/rxlib.git"
+  },
+  "keywords": [
+    "library",
+    "react",
+    "npm-package",
+    "component-library"
+  ],
+  "author": "“glerystonmatos” <“glerystonmatos@gmail.com”>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rxcrud/rxlib/issues"
+  },
+  "homepage": "https://github.com/rxcrud/rxlib#readme"
+}
