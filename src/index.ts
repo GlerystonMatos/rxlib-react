@@ -1,22 +1,27 @@
 /* Importações */
 
-import Input from './components/input/Input';
-import Button from './components/buttons/button/Button';
+import Breadcrumb from './components/breadcrumb/Breadcrumb';
 
-/*  Lista de componentes */
-
-const ComponentsList = [
-    'rxlib v1.0.0',
-    ' - components',
-    ' - - buttons',
-    ' - - - Button v1.0.0',
-    ' - - input',
-    ' - - - Input v1.0.0',
-];
-
-export { ComponentsList };
+import {
+    jwtTokenExpirado,
+    obterIdUsuarioJwt,
+    obterLicenciadaJwt,
+    obterNomeUsuarioJwt,
+    obterEmailUsuarioJwt,
+    obterAdministradorJwt,
+    usuarioTemPermissaoJwt,
+} from './services/seguranca';
 
 /* Componentes exportados */
 
-export { Input };
-export { Button };
+export { Breadcrumb };
+
+/* Funções exportadas */
+
+export { jwtTokenExpirado };
+export { obterIdUsuarioJwt };
+export { obterLicenciadaJwt };
+export { obterNomeUsuarioJwt };
+export { obterEmailUsuarioJwt };
+export { obterAdministradorJwt };
+export { usuarioTemPermissaoJwt };
