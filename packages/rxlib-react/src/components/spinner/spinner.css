@@ -1,0 +1,4 @@
+.rxlib-spinner {
+    --bs-text-opacity: 1;
+    color: var(--rxlib-principal);
+}
