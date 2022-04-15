@@ -9,9 +9,9 @@ export interface SpinnerProps {
 }
 
 export default function Spinner({
+    type,
     classNameDiv,
     classNameSpinner,
-    type = 'rxlib-spinner',
 }: SpinnerProps) {
     let cssClassNameDiv = 'text-center';
     if ((classNameDiv) && (classNameDiv !== '')) {
