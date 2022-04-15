@@ -1,6 +1,6 @@
-import './spinner.css';
-import '../../style/rxlib.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../style/rxlib.css';
+import './spinner.css';
 
 export interface SpinnerProps {
     classNameDiv?: string;
@@ -8,15 +8,19 @@ export interface SpinnerProps {
     type: 'rxlib-spinner' | 'text-primary' | 'text-secondary' | 'text-success' | 'text-danger' | 'text-warning' | 'text-info' | 'text-light' | 'text-dark';
 }
 
-export default function Spinner(props: SpinnerProps) {
+export default function Spinner({
+    classNameDiv,
+    classNameSpinner,
+    type = 'rxlib-spinner',
+}: SpinnerProps) {
     let cssClassNameDiv = 'text-center';
-    if ((props.classNameDiv) && (props.classNameDiv !== '')) {
-        cssClassNameDiv = props.classNameDiv + ' ' + cssClassNameDiv;
+    if ((classNameDiv) && (classNameDiv !== '')) {
+        cssClassNameDiv = classNameDiv + ' ' + cssClassNameDiv;
     }
 
-    let cssClassNameSpinner = 'spinner-border ' + props.type;
-    if ((props.classNameSpinner) && (props.classNameSpinner !== '')) {
-        cssClassNameSpinner = props.classNameSpinner + ' ' + cssClassNameSpinner;
+    let cssClassNameSpinner = 'spinner-border ' + type;
+    if ((classNameSpinner) && (classNameSpinner !== '')) {
+        cssClassNameSpinner = classNameSpinner + ' ' + cssClassNameSpinner;
     }
 
     return (

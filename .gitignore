@@ -93,6 +93,7 @@ out
 .nuxt
 dist
 lib
+storybook-static
 
 # Gatsby files
 .cache/

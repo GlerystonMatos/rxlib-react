@@ -4,7 +4,9 @@
   "scripts": {
     "build": "lerna run build --scope rxlib-react",
     "watch": "lerna run watch --scope rxlib-react",
-    "package": "lerna exec --scope rxlib-react -- npm pack"
+    "package": "lerna exec --scope rxlib-react -- npm pack",
+    "storybook": "lerna run storybook --scope rxlib-react",
+    "build-storybook": "lerna run build-storybook --scope rxlib-react"
   },
   "repository": {
     "type": "git",
