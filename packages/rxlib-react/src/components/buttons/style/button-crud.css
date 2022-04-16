@@ -1,9 +1,59 @@
 .rxlib-button-crud {
+    display: flex;
+}
+
+.rxlib-button-crud .button-salvar {
     width: 10rem;
     margin-right: 1rem;
 }
 
-.rxlib-button-crud-spinner {
-    width: 20rem;
+.rxlib-button-crud .button-cancelar-voltar {
+    width: 10rem;
+}
+
+.rxlib-button-crud .spinner-carregando {
+    min-width: 20rem;
     margin-right: 2rem;
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+
+    .rxlib-button-crud {
+        display: grid;
+    }
+
+    .rxlib-button-crud .button-salvar {
+        width: 100%;
+    }
+
+    .rxlib-button-crud .button-cancelar-voltar {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .rxlib-button-crud .spinner-carregando {
+        min-width: 1rem;
+        margin-right: 0rem;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 835px) {
+
+    .rxlib-button-crud {
+        display: grid;
+    }
+
+    .rxlib-button-crud .button-salvar {
+        width: 100%;
+    }
+
+    .rxlib-button-crud .button-cancelar-voltar {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .rxlib-button-crud .spinner-carregando {
+        min-width: 1rem;
+        margin-right: 0rem;
+    }
 }

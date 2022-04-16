@@ -74,16 +74,16 @@ export default function ButtonsCrud({
                 </div>
             </div>
             : <div className='row px-1'>
-                <div className='col-12 mt-3 d-flex'>
+                <div className='col-12 mt-3 rxlib-button-crud'>
                     {
                         carregando
-                            ? <div className='rxlib-button-crud-spinner'>
+                            ? <div className='spinner-carregando'>
                                 <Spinner
                                     classStyle={getStyleSpinner()}
                                     classNameDiv={classNameDivSpinner} />
                             </div>
                             : <>
-                                <div className='rxlib-button-crud'>
+                                <div className='button-salvar'>
                                     <Button
                                         type='submit'
                                         texto='Salvar'
@@ -91,7 +91,7 @@ export default function ButtonsCrud({
                                         carregando={carregando}
                                         classStyle={styleButton} />
                                 </div>
-                                <div className='rxlib-button-crud'>
+                                <div className='button-cancelar-voltar'>
                                     {
                                         ((linkCancelarVoltar) && (linkCancelarVoltar !== ''))
                                             ? <ButtonLink
