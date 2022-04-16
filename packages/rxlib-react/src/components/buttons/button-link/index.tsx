@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/rxlib.css';
@@ -11,16 +11,18 @@ export interface ButtonLinkProps {
     className?: string;
     abrirNovaJanela?: boolean;
     fontAwesomeIcon?: IconDefinition;
+    classStyle: 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
 }
 
 export default function ButtonLink({
     link,
     texto,
     className,
+    classStyle,
     abrirNovaJanela,
     fontAwesomeIcon,
 }: ButtonLinkProps) {
-    let classNameButton = 'btn btn-warning btn-block rxlib-btn';
+    let classNameButton = 'btn btn-block rxlib-btn ' + classStyle;
     if ((className) && (className !== '')) {
         classNameButton = className + ' ' + classNameButton;
     }

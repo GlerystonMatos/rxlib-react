@@ -14,6 +14,7 @@ export interface ButtonProps {
     type: 'button' | 'submit';
     classNameDivSpinner?: string;
     fontAwesomeIcon?: IconDefinition;
+    classStyle: 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
 }
 
 export default function Button({
@@ -24,8 +25,9 @@ export default function Button({
     type = 'button',
     fontAwesomeIcon,
     classNameDivSpinner,
+    classStyle = 'btn-rxlib',
 }: ButtonProps) {
-    let classNameButton = 'btn btn-warning btn-block rxlib-btn';
+    let classNameButton = 'btn btn-block rxlib-btn ' + classStyle;
     if ((className) && (className !== '')) {
         classNameButton = className + ' ' + classNameButton;
     }
@@ -35,7 +37,7 @@ export default function Button({
             {
                 (carregando)
                     ? <Spinner
-                        type='rxlib-spinner'
+                        classStyle='rxlib-spinner'
                         classNameDiv={classNameDivSpinner} />
                     : (fontAwesomeIcon)
                         ? <button type={type} onClick={onClick} className={classNameButton}>

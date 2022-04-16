@@ -1,21 +1,26 @@
 :root {
-    /* rxlib */
+    --rxlib-principal: #FDA227;
+    --rxlib-principal-01: #FDAB4C;
+    --rxlib-principal-02: #FDA840;
+    --rxlib-principal-03: #FDAE59;
+    --rxlib-principal-rgb-50: rgb(253, 162, 39, 0.5);
+    --rxlib-principal-rgb-70: rgb(253, 162, 39, 0.7);
+    --rxlib-principal-shadow: rgba(215, 133, 38, 0.5);
+
+    --rxlib-fonte: #FFFFFF;
+    --rxlib-fonte-botao: #000000;
+
     --rxlib-link: #6C757D;
     --rxlib-menu: #363636;
     --rxlib-telas: #FFFFFF;
     --rxlib-borda: #E0E0E0;
-    --rxlib-fonte: #FFFFFF;
     --rxlib-sistema: #363636;
-    /* principal */
-    --rxlib-principal: #FDA227;
-    --rxlib-principal-rgb-50: rgb(253, 161, 39, .5);
-    --rxlib-principal-rgb-70: rgb(253, 161, 39, .7);
-    /* navbar */
+
     --rxlib-navbar: #363636;
     --rxlib-navbar-fonte: #FFFFFF;
     --rxlib-navbar-active: #6D6D6D;
     --rxlib-navbar-gradient: #6D6D6D;
-    /* tabela */
+
     --rxlib-tabela-listrado-rgb-25: rgba(0, 0, 0, 0.05);
 }
 

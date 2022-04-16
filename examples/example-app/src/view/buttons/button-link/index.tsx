@@ -7,6 +7,7 @@ export default function Button() {
             <ButtonLinkRx
                 texto='link'
                 link='buttonlink'
+                classStyle='btn-rxlib'
                 fontAwesomeIcon={faLink} />
         </div>
     );

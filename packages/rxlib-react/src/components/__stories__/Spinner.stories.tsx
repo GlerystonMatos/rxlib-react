@@ -5,7 +5,7 @@ export default {
     component: Spinner,
     title: 'rxlib-react/Spinner',
     argTypes: {
-        type: {
+        classStyle: {
             control: 'radio',
             default: 'rxlib-spinner',
             options: ['rxlib-spinner', 'text-primary', 'text-secondary', 'text-success', 'text-danger', 'text-warning', 'text-info', 'text-light', 'text-dark'],
@@ -17,12 +17,12 @@ const Template: ComponentStory<typeof Spinner> = (args) => <Spinner {...args} />
 
 export const Padrao = Template.bind({});
 Padrao.args = {
-    type: 'rxlib-spinner',
+    classStyle: 'rxlib-spinner',
 };
 
 export const ComCSS = Template.bind({});
 ComCSS.args = {
-    type: 'rxlib-spinner',
     classNameDiv: 'mt-3',
     classNameSpinner: 'ms-3',
+    classStyle: 'rxlib-spinner',
 };

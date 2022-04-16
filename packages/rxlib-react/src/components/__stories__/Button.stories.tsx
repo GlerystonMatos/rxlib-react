@@ -11,6 +11,11 @@ export default {
             default: 'button',
             options: ['button', 'submit'],
         },
+        classStyle: {
+            control: 'radio',
+            default: 'btn-rxlib',
+            options: ['btn-rxlib', 'btn-primary', 'btn-secondary', 'btn-success', 'btn-danger', 'btn-warning', 'btn-info', 'btn-light', 'btn-dark'],
+        },
     },
 } as ComponentMeta<typeof Button>;
 
@@ -25,6 +30,7 @@ Padrao.args = {
     type: 'button',
     texto: 'button',
     carregando: false,
+    classStyle: 'btn-rxlib',
 };
 
 export const PadraoComCSS = Template.bind({});
@@ -33,6 +39,7 @@ PadraoComCSS.args = {
     texto: 'button',
     carregando: false,
     className: 'mt-5',
+    classStyle: 'btn-rxlib',
 };
 
 export const Carregando = Template.bind({});
@@ -40,6 +47,7 @@ Carregando.args = {
     type: 'button',
     texto: 'button',
     carregando: true,
+    classStyle: 'btn-rxlib',
 };
 
 export const CarregandoComCSS = Template.bind({});
@@ -47,6 +55,7 @@ CarregandoComCSS.args = {
     type: 'button',
     texto: 'button',
     carregando: true,
+    classStyle: 'btn-rxlib',
     classNameDivSpinner: 'mt-5',
 };
 
@@ -56,6 +65,7 @@ OnClick.args = {
     texto: 'button',
     carregando: false,
     onClick: () => click(),
+    classStyle: 'btn-rxlib',
 };
 
 export const FontAwesome = Template.bind({});
@@ -63,5 +73,6 @@ FontAwesome.args = {
     type: 'button',
     texto: 'button',
     carregando: false,
+    classStyle: 'btn-rxlib',
     fontAwesomeIcon: faWrench,
 };

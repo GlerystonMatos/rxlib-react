@@ -5,7 +5,8 @@ export default function Button() {
         <div className='px-5 mt-5'>
             <ButtonRx
                 type='button'
-                texto='button' />
+                texto='button'
+                classStyle='btn-rxlib' />
         </div>
     );
 }
