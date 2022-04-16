@@ -1,0 +1,30 @@
+.rxlib-btn {
+    width: 100%;
+    color: var(--rxlib-fonte);
+    border-color: var(--rxlib-principal);
+    background-color: var(--rxlib-principal);
+}
+
+.rxlib-btn:active {
+    color: var(--rxlib-fonte);
+    border-color: var(--rxlib-principal);
+    background-color: var(--rxlib-principal);
+    box-shadow: 0 0 0 0.05rem var(--rxlib-principal-rgb-50);
+}
+
+.rxlib-btn:focus {
+    color: var(--rxlib-fonte);
+    border-color: var(--rxlib-principal);
+    background-color: var(--rxlib-principal);
+    box-shadow: 0 0 0 0.05rem var(--rxlib-principal-rgb-50);
+}
+
+.rxlib-btn:hover {
+    color: var(--rxlib-fonte);
+    border-color: var(--rxlib-principal);
+    background-color: var(--rxlib-principal);
+}
+
+.btn-check:active+.rxlib-btn:focus, .btn-check:checked+.rxlib-btn:focus, .rxlib-btn.active:focus, .rxlib-btn:active:focus, .show>.rxlib-btn.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.05rem var(--rxlib-principal-rgb-50);
+}

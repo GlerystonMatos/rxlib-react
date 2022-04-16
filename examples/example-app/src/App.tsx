@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './view/home';
 import Spinner from './view/spinner';
+import Button from './view/buttons/button';
 import BreadcrumbSegundo from './view/breadcrumb/segundo';
 import BreadcrumbPrimeiro from './view/breadcrumb/primeiro';
 
@@ -10,6 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/button' element={<Button />} />
         <Route path='/spinner' element={<Spinner />} />
         <Route path='/breadcrumbsegundo' element={<BreadcrumbSegundo />} />
         <Route path='/breadcrumbprimeiro' element={<BreadcrumbPrimeiro />} />
