@@ -6,6 +6,7 @@ export default function Home() {
             <p>rxlib-react</p>
             <p><a href='/breadcrumbprimeiro'>Breadcrumb</a></p>
             <p><a href='/button'>Button</a></p>
+            <p><a href='/buttonlink'>ButtonLink</a></p>
             <p><a href='/spinner'>Spinner</a></p>
         </div>
     );

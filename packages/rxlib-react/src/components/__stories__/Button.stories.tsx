@@ -63,5 +63,5 @@ FontAwesome.args = {
     type: 'button',
     texto: 'button',
     carregando: false,
-    fontAwesomeIconName: faWrench,
+    fontAwesomeIcon: faWrench,
 };

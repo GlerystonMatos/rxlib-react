@@ -9,12 +9,12 @@ export default {
     input: 'src/index.ts',
     output: [
         {
-            file: './lib/cjs/index.js',
             format: 'cjs',
+            file: './lib/cjs/index.js',
         },
         {
-            file: './lib/esm/index.js',
             format: 'es',
+            file: './lib/esm/index.js',
         },
     ],
     external: [...Object.keys(pkg.peerDependencies || {})],

@@ -28,5 +28,6 @@
     "exclude": [
         "lib",
         "node_modules",
+        "src/**/**/*.stories.tsx",
     ],
 }

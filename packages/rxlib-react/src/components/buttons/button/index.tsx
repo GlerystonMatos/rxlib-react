@@ -1,10 +1,10 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconName } from '@fortawesome/fontawesome-svg-core';
 import Spinner from '../../spinner';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/rxlib.css';
-import './button.css';
+import '../style/button.css';
 
 export interface ButtonProps {
     texto: string;
@@ -13,7 +13,7 @@ export interface ButtonProps {
     onClick?: () => void;
     type: 'button' | 'submit';
     classNameDivSpinner?: string;
-    fontAwesomeIconName?: IconName;
+    fontAwesomeIcon?: IconDefinition;
 }
 
 export default function Button({
@@ -22,8 +22,8 @@ export default function Button({
     className,
     carregando,
     type = 'button',
+    fontAwesomeIcon,
     classNameDivSpinner,
-    fontAwesomeIconName,
 }: ButtonProps) {
     let classNameButton = 'btn btn-warning btn-block rxlib-btn';
     if ((className) && (className !== '')) {
@@ -37,9 +37,9 @@ export default function Button({
                     ? <Spinner
                         type='rxlib-spinner'
                         classNameDiv={classNameDivSpinner} />
-                    : (fontAwesomeIconName)
+                    : (fontAwesomeIcon)
                         ? <button type={type} onClick={onClick} className={classNameButton}>
-                            <FontAwesomeIcon icon={fontAwesomeIconName} />
+                            <FontAwesomeIcon icon={fontAwesomeIcon} />
                         </button>
                         : <button type={type} onClick={onClick} className={classNameButton}>
                             {texto}
