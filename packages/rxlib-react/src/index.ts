@@ -13,10 +13,14 @@ import ButtonLink from './components/buttons/button-link';
 export * from './components/buttons/buttons-crud';
 import ButtonsCrud from './components/buttons/buttons-crud';
 
+export * from './components/input-label';
+import InputLabel from './components/input-label';
+
 export {
     Button,
     Spinner,
     ButtonLink,
     Breadcrumb,
+    InputLabel,
     ButtonsCrud,
 };

@@ -1,0 +1,21 @@
+.rxlib-input-label-linha {
+    width: 50%;
+}
+
+.rxlib-input-label-coluna {
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+
+    .rxlib-input-label-linha {
+        width: 100%;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 835px) {
+
+    .rxlib-input-label-linha {
+        width: 100%;
+    }
+}

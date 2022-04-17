@@ -33,3 +33,8 @@ a:hover {
     text-decoration: none;
     color: var(--rxlib-link);
 }
+
+.form-control:focus {
+    border-color: var(--rxlib-principal-02);
+    box-shadow: 0 0 0 0.05rem var(--rxlib-principal-shadow);
+}

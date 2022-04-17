@@ -27,7 +27,7 @@ export default function Button({
     classNameDivSpinner,
     classStyle = 'btn-rxlib',
 }: ButtonProps) {
-    let classNameButton = 'btn btn-block rxlib-btn ' + classStyle;
+    let classNameButton: string = 'btn btn-block rxlib-btn ' + classStyle;
     if ((className) && (className !== '')) {
         classNameButton = className + ' ' + classNameButton;
     }

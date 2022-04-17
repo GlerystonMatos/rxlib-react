@@ -13,12 +13,12 @@ export default function Spinner({
     classNameSpinner,
     classStyle = 'rxlib-spinner',
 }: SpinnerProps) {
-    let cssClassNameDiv = 'text-center';
+    let cssClassNameDiv: string = 'text-center';
     if ((classNameDiv) && (classNameDiv !== '')) {
         cssClassNameDiv = classNameDiv + ' ' + cssClassNameDiv;
     }
 
-    let cssClassNameSpinner = 'spinner-border ' + classStyle;
+    let cssClassNameSpinner: string = 'spinner-border ' + classStyle;
     if ((classNameSpinner) && (classNameSpinner !== '')) {
         cssClassNameSpinner = classNameSpinner + ' ' + cssClassNameSpinner;
     }

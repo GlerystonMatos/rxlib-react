@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './view/home';
 import Spinner from './view/spinner';
 import Button from './view/buttons/button';
+import InputLabel from './view/input-label';
 import ButtonLink from './view/buttons/button-link';
 import ButtonsCrud from './view/buttons/buttons-crud';
 import BreadcrumbSegundo from './view/breadcrumb/segundo';
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/button' element={<Button />} />
         <Route path='/spinner' element={<Spinner />} />
+        <Route path='/inputlabel' element={<InputLabel />} />
         <Route path='/buttonlink' element={<ButtonLink />} />
         <Route path='/buttonscrud' element={<ButtonsCrud />} />
         <Route path='/breadcrumbsegundo' element={<BreadcrumbSegundo />} />

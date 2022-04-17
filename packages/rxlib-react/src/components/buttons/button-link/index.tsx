@@ -22,7 +22,7 @@ export default function ButtonLink({
     abrirNovaJanela,
     fontAwesomeIcon,
 }: ButtonLinkProps) {
-    let classNameButton = 'btn btn-block rxlib-btn ' + classStyle;
+    let classNameButton: string = 'btn btn-block rxlib-btn ' + classStyle;
     if ((className) && (className !== '')) {
         classNameButton = className + ' ' + classNameButton;
     }
