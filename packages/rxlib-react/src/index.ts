@@ -16,9 +16,13 @@ import ButtonsCrud from './components/buttons/buttons-crud';
 export * from './components/input-label';
 import InputLabel from './components/input-label';
 
+export * from './components/checkbox';
+import Checkbox from './components/checkbox';
+
 export {
     Button,
     Spinner,
+    Checkbox,
     ButtonLink,
     Breadcrumb,
     InputLabel,

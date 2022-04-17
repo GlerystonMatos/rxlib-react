@@ -38,3 +38,13 @@ a:hover {
     border-color: var(--rxlib-principal-02);
     box-shadow: 0 0 0 0.05rem var(--rxlib-principal-shadow);
 }
+
+.form-check-input:focus {
+    border-color: var(--rxlib-principal-02);
+    box-shadow: 0 0 0 0.05rem var(--rxlib-principal-shadow);
+}
+
+.form-check-input:checked {
+    border-color: var(--rxlib-principal);
+    background-color: var(--rxlib-principal);
+}
