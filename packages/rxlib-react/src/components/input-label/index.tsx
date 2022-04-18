@@ -13,6 +13,11 @@ import {
     maskTelefone,
 } from './mask';
 
+export type InputLabelSize = 'linha' | 'coluna';
+export type InputLabelAccept = 'audio/*' | 'video/*' | 'image/*';
+export type InputLabelType = 'text' | 'password' | 'date' | 'email' | 'number' | 'file';
+export type InputLabelMask = 'cpf' | 'cnpj' | 'cep' | 'telefone' | 'currency' | 'number';
+
 export interface InputLabelProps {
     id: string;
     name: string;
@@ -24,14 +29,14 @@ export interface InputLabelProps {
     required?: boolean;
     autoFocus?: boolean;
     placeholder: string;
+    type: InputLabelType;
     defaultValue?: string;
-    size?: 'linha' | 'coluna';
+    size?: InputLabelSize;
+    mask?: InputLabelMask;
+    accept?: InputLabelAccept;
     setFile?: (file: File) => void;
-    accept?: 'audio/*' | 'video/*' | 'image/*';
     referencia: React.LegacyRef<HTMLInputElement>;
     onChange?: (e: React.FormEvent<HTMLInputElement>) => void;
-    type: 'text' | 'password' | 'date' | 'email' | 'number' | 'file';
-    mask?: 'cpf' | 'cnpj' | 'cep' | 'telefone' | 'currency' | 'number';
 }
 
 export default function InputLabel({
@@ -54,7 +59,7 @@ export default function InputLabel({
     placeholder,
     defaultValue,
 }: InputLabelProps) {
-    const [valorPadrao, setValorPadrao] = useState('');
+    const [valorPadrao, setValorPadrao] = useState<string>('');
 
     let inputSize: string = 'linha';
     if (size !== undefined) {
@@ -92,7 +97,7 @@ export default function InputLabel({
 
     function verificarEvento(event: React.ChangeEvent<HTMLInputElement>) {
         if (mask) {
-            const { value } = event.currentTarget
+            const { value } = event.currentTarget;
             event.currentTarget.value = getMask(value);
         }
 
@@ -127,10 +132,10 @@ export default function InputLabel({
     }
 
     useEffect(() => {
-        function formatarValorDecimal(valor: string) {
-            const valorPadraoOriginal = parseFloat(valor);
+        function formatarValorDecimal(valor: string): string {
+            const valorPadraoOriginal: number = parseFloat(valor);
 
-            let formatador = Intl.NumberFormat("pr-BR", {
+            let formatador: Intl.NumberFormat = Intl.NumberFormat("pr-BR", {
                 currency: "BRL",
                 style: "decimal",
                 minimumFractionDigits: 2,
@@ -198,7 +203,6 @@ export default function InputLabel({
                     ? <label htmlFor={id} className='form-label'>{label}</label>
                     : ''
             }
-
             <input {...configurarInput()} />
         </>
     );

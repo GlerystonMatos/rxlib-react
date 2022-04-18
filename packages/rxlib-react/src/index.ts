@@ -19,6 +19,9 @@ import InputLabel from './components/input-label';
 export * from './components/checkbox';
 import Checkbox from './components/checkbox';
 
+export * from './components/textarea-label';
+import TextareaLabel from './components/textarea-label';
+
 export {
     Button,
     Spinner,
@@ -27,4 +30,5 @@ export {
     Breadcrumb,
     InputLabel,
     ButtonsCrud,
+    TextareaLabel,
 };

@@ -6,15 +6,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/rxlib.css';
 import '../style/button.css';
 
+export type ButtonType = 'button' | 'submit';
+export type ButtonClassStyle = 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
+
 export interface ButtonProps {
     texto: string;
+    type: ButtonType;
     className?: string;
     carregando?: boolean;
     onClick?: () => void;
-    type: 'button' | 'submit';
     classNameDivSpinner?: string;
+    classStyle: ButtonClassStyle;
     fontAwesomeIcon?: IconDefinition;
-    classStyle: 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
 }
 
 export default function Button({
@@ -39,13 +42,13 @@ export default function Button({
                     ? <Spinner
                         classStyle='rxlib-spinner'
                         classNameDiv={classNameDivSpinner} />
-                    : (fontAwesomeIcon)
-                        ? <button type={type} onClick={onClick} className={classNameButton}>
-                            <FontAwesomeIcon icon={fontAwesomeIcon} />
-                        </button>
-                        : <button type={type} onClick={onClick} className={classNameButton}>
-                            {texto}
-                        </button>
+                    : <button type={type} onClick={onClick} className={classNameButton}>
+                        {
+                            (fontAwesomeIcon)
+                                ? <FontAwesomeIcon icon={fontAwesomeIcon} />
+                                : texto
+                        }
+                    </button>
             }
         </>
     );

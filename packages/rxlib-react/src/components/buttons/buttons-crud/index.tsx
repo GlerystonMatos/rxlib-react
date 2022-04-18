@@ -1,6 +1,6 @@
+import Spinner, { SpinnerClassStyle } from '../../spinner';
+import Button, { ButtonClassStyle } from '../button';
 import ButtonLink from '../button-link';
-import Spinner from '../../spinner';
-import Button from '../button';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/rxlib.css';
@@ -13,7 +13,7 @@ export interface ButtonsCrudProps {
     linkCancelarVoltar?: string;
     classNameDivSpinner?: string;
     onCancelarVoltar?: () => void;
-    styleButton: 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
+    styleButton: ButtonClassStyle;
 }
 
 export default function ButtonsCrud({
@@ -26,7 +26,7 @@ export default function ButtonsCrud({
     classNameDivSpinner,
 }: ButtonsCrudProps) {
 
-    function getStyleSpinner(): 'rxlib-spinner' | 'text-primary' | 'text-secondary' | 'text-success' | 'text-danger' | 'text-warning' | 'text-info' | 'text-light' | 'text-dark' {
+    function getStyleSpinner(): SpinnerClassStyle {
         switch (styleButton) {
             case 'btn-rxlib':
                 return 'rxlib-spinner';
@@ -54,8 +54,8 @@ export default function ButtonsCrud({
     return (
         (visualizar)
             ? <div className='row px-1'>
-                <div className='col-12 mt-3 d-grid'>
-                    <div className='rxlib-button-crud'>
+                <div className='col-12 mt-3 rxlib-button-crud'>
+                    <div className='button-cancelar-voltar'>
                         {
                             ((linkCancelarVoltar) && (linkCancelarVoltar !== ''))
                                 ? <ButtonLink

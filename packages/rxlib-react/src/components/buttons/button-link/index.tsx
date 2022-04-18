@@ -1,5 +1,6 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ButtonClassStyle } from '../button';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../../style/rxlib.css';
@@ -10,8 +11,8 @@ export interface ButtonLinkProps {
     texto: string;
     className?: string;
     abrirNovaJanela?: boolean;
+    classStyle: ButtonClassStyle;
     fontAwesomeIcon?: IconDefinition;
-    classStyle: 'btn-rxlib' | 'btn-primary' | 'btn-secondary' | 'btn-success' | 'btn-danger' | 'btn-warning' | 'btn-info' | 'btn-light' | 'btn-dark';
 }
 
 export default function ButtonLink({
@@ -27,25 +28,27 @@ export default function ButtonLink({
         classNameButton = className + ' ' + classNameButton;
     }
 
+    function configurarLink(): React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> {
+        let linkProps: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement> = {
+            href: link,
+            className: classNameButton,
+        };
+
+        if (abrirNovaJanela) {
+            linkProps.target = '_blank';
+            linkProps.rel = 'noopener noreferrer';
+        }
+
+        return linkProps;
+    }
+
     return (
-        <>
+        <a {...configurarLink()}>
             {
                 (fontAwesomeIcon)
-                    ? abrirNovaJanela
-                        ? <a href={link} className={classNameButton} target='_blank' rel='noopener noreferrer'>
-                            <FontAwesomeIcon icon={fontAwesomeIcon} />
-                        </a>
-                        : <a href={link} className={classNameButton}>
-                            <FontAwesomeIcon icon={fontAwesomeIcon} />
-                        </a>
-                    : abrirNovaJanela
-                        ? <a href={link} className={classNameButton} target='_blank' rel='noopener noreferrer'>
-                            {texto}
-                        </a>
-                        : <a href={link} className={classNameButton}>
-                            {texto}
-                        </a>
+                    ? <FontAwesomeIcon icon={fontAwesomeIcon} />
+                    : texto
             }
-        </>
+        </a>
     );
 }

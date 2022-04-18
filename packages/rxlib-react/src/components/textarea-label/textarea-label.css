@@ -1,0 +1,21 @@
+.rxlib-textarea-label-linha {
+    width: 50%;
+}
+
+.rxlib-textarea-label-coluna {
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+
+    .rxlib-textarea-label-linha {
+        width: 100%;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 835px) {
+
+    .rxlib-textarea-label-linha {
+        width: 100%;
+    }
+}

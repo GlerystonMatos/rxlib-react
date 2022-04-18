@@ -7,6 +7,15 @@ export default {
     component: InputLabel,
     title: 'rxlib-react/InputLabel',
     argTypes: {
+        size: {
+            control: 'radio',
+            default: 'linha',
+            options: ['linha', 'coluna'],
+        },
+        accept: {
+            control: 'radio',
+            options: ['audio/*', 'video/*', 'image/*'],
+        },
         type: {
             default: 'text',
             control: 'radio',
@@ -15,15 +24,6 @@ export default {
         mask: {
             control: 'radio',
             options: ['cpf', 'cnpj', 'cep', 'telefone', 'currency', 'number'],
-        },
-        size: {
-            default: 'linha',
-            control: 'radio',
-            options: ['linha', 'coluna'],
-        },
-        accept: {
-            control: 'radio',
-            options: ['audio/*', 'video/*', 'image/*'],
         },
     },
 } as ComponentMeta<typeof InputLabel>;
@@ -339,7 +339,7 @@ DefaultValue.args = {
     readOnly: false,
     autoFocus: true,
     placeholder: 'place holder',
-    defaultValue: 'defaultValue',
+    defaultValue: 'default value',
     referencia: React.createRef(),
 };
 

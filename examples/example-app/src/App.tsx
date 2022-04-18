@@ -5,6 +5,7 @@ import Spinner from './view/spinner';
 import Checkbox from './view/checkbox';
 import Button from './view/buttons/button';
 import InputLabel from './view/input-label';
+import TextareaLabel from './view/textarea-label';
 import ButtonLink from './view/buttons/button-link';
 import ButtonsCrud from './view/buttons/buttons-crud';
 import BreadcrumbSegundo from './view/breadcrumb/segundo';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/inputlabel' element={<InputLabel />} />
         <Route path='/buttonlink' element={<ButtonLink />} />
         <Route path='/buttonscrud' element={<ButtonsCrud />} />
+        <Route path='/textarealabel' element={<TextareaLabel />} />
         <Route path='/breadcrumbsegundo' element={<BreadcrumbSegundo />} />
         <Route path='/breadcrumbprimeiro' element={<BreadcrumbPrimeiro />} />
       </Routes>
