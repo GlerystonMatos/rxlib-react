@@ -1,27 +1,19 @@
+import { MaskType, maskValue } from '../../utils/mask';
 import React, { useEffect, useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../style/rxlib.css';
 import './input-label.css';
 
-import {
-    maskCpf,
-    maskCep,
-    maskCnpj,
-    maskInteiro,
-    maskCurrency,
-    maskTelefone,
-} from './mask';
-
 export type InputLabelSize = 'linha' | 'coluna';
 export type InputLabelAccept = 'audio/*' | 'video/*' | 'image/*';
 export type InputLabelType = 'text' | 'password' | 'date' | 'email' | 'number' | 'file';
-export type InputLabelMask = 'cpf' | 'cnpj' | 'cep' | 'telefone' | 'currency' | 'number';
 
 export interface InputLabelProps {
     id: string;
     name: string;
     label: string;
+    mask?: MaskType;
     limpar?: boolean;
     maxLength: number;
     readOnly: boolean;
@@ -32,7 +24,6 @@ export interface InputLabelProps {
     type: InputLabelType;
     defaultValue?: string;
     size?: InputLabelSize;
-    mask?: InputLabelMask;
     accept?: InputLabelAccept;
     setFile?: (file: File) => void;
     referencia: React.LegacyRef<HTMLInputElement>;
@@ -98,7 +89,7 @@ export default function InputLabel({
     function verificarEvento(event: React.ChangeEvent<HTMLInputElement>) {
         if (mask) {
             const { value } = event.currentTarget;
-            event.currentTarget.value = getMask(value);
+            event.currentTarget.value = maskValue(value, mask);
         }
 
         if ((type === 'file') && (setFile)) {
@@ -109,25 +100,6 @@ export default function InputLabel({
 
         if (onChange) {
             onChange(event);
-        }
-    }
-
-    function getMask(value: string): string {
-        switch (mask) {
-            case 'cpf':
-                return maskCpf(value);
-            case 'cnpj':
-                return maskCnpj(value);
-            case 'cep':
-                return maskCep(value);
-            case 'telefone':
-                return maskTelefone(value);
-            case 'currency':
-                return maskCurrency(value);
-            case 'number':
-                return maskInteiro(value);
-            default:
-                return value;
         }
     }
 

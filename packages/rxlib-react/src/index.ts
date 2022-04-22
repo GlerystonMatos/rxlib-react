@@ -22,7 +22,10 @@ import Checkbox from './components/checkbox';
 export * from './components/textarea-label';
 import TextareaLabel from './components/textarea-label';
 
+import { maskValue } from './utils/mask';
+
 export {
+    /* components  */
     Button,
     Spinner,
     Checkbox,
@@ -31,4 +34,6 @@ export {
     InputLabel,
     ButtonsCrud,
     TextareaLabel,
+    /* utils  */
+    maskValue,
 };

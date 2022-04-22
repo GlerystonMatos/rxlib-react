@@ -1,4 +1,4 @@
-export function maskCpf(value: string): string {
+function maskCpf(value: string): string {
     return value
         .replace(/\D/g, '')
         .replace(/(\d{3})(\d)/, '$1.$2')
@@ -7,7 +7,7 @@ export function maskCpf(value: string): string {
         .replace(/(-\d{2})\d+?$/, '$1');
 }
 
-export function maskCnpj(value: string): string {
+function maskCnpj(value: string): string {
     return value
         .replace(/\D/g, '')
         .replace(/(\d{2})(\d)/, '$1.$2')
@@ -17,7 +17,7 @@ export function maskCnpj(value: string): string {
         .replace(/(-\d{2})\d+?$/, '$1');
 }
 
-export function maskCep(value: string): string {
+function maskCep(value: string): string {
     return value
         .replace(/\D/g, '')
         .replace(/(\d{2})(\d)/, '$1.$2')
@@ -25,7 +25,7 @@ export function maskCep(value: string): string {
         .replace(/(-\d{3})\d+?$/, '$1');
 }
 
-export function maskTelefone(value: string): string {
+function maskTelefone(value: string): string {
     return value
         .replace(/\D/g, '')
         .replace(/(\d{2})(\d)/, '($1) $2')
@@ -33,11 +33,11 @@ export function maskTelefone(value: string): string {
         .replace(/(-\d{4})\d+?$/, '$1');
 }
 
-export function maskCurrency(value: string): string {
+function maskCurrency(value: string): string {
     value = value.replace(/\D/g, '');
 
     if ((value.trim().length >= 4) && (value.startsWith('0')))
-        value = value.substring(1, value.trim().length)
+        value = value.substring(1, value.trim().length);
 
     switch (value.trim().length) {
         case 0:
@@ -69,7 +69,7 @@ export function maskCurrency(value: string): string {
     }
 }
 
-export function maskInteiro(value: string): string {
+function maskNumber(value: string): string {
     let valor = value
         .replace(/\D/g, '')
         .replaceAll('.', '')
@@ -78,4 +78,25 @@ export function maskInteiro(value: string): string {
     return (valor === '')
         ? '0'
         : String(parseInt(valor));
+}
+
+export type MaskType = 'cpf' | 'cnpj' | 'cep' | 'telefone' | 'currency' | 'number';
+
+export function maskValue(value: string, mask: MaskType): string {
+    switch (mask) {
+        case 'cpf':
+            return maskCpf(value);
+        case 'cnpj':
+            return maskCnpj(value);
+        case 'cep':
+            return maskCep(value);
+        case 'telefone':
+            return maskTelefone(value);
+        case 'currency':
+            return maskCurrency(value);
+        case 'number':
+            return maskNumber(value);
+        default:
+            return value;
+    };
 }
