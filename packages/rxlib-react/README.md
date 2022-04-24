@@ -36,4 +36,4 @@ npm run test
 ```
 
 ## ⚠️ Licença
-`rxlib-react` é uma biblioteca de componente React livre e de código aberto licenciada sob a [MIT License](https://github.com/rxcrud/rxlib-react/blob/main/LICENSE).
+`rxlib-react` é uma biblioteca de componente React livre e de código aberto licenciada sob a [MIT License](./LICENSE).
