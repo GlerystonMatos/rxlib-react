@@ -32,9 +32,12 @@ export default function Checkbox({
             onChange: onChange,
             disabled: disabled,
             'aria-label': '...',
-            defaultChecked: defaultChecked,
             className: 'form-check-input me-2',
         };
+
+        if (defaultChecked) {
+            inputProps.defaultChecked = true;
+        }
 
         return inputProps;
     }

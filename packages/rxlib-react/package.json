@@ -1,6 +1,6 @@
 {
   "name": "rxlib-react",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Biblioteca de componente React para criação de projetos de forma simples e rápida.",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",

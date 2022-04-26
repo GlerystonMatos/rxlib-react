@@ -5,7 +5,7 @@ Biblioteca de componente React para criação de projetos de forma simples e rá
 [![license](https://img.shields.io/github/license/rxcrud/rxlib-react?color=green&style=flat-square)](https://github.com/rxcrud/rxlib-react/blob/main/LICENSE)
 [![Storybook](https://img.shields.io/twitter/url?color=grey&label=Storybook&logo=Storybook&style=flat-square&url=https%3A%2F%2Ftwitter.com%2FMatosGleryston)](https://62597813c60998003a3d653b-otlmtdmkuw.chromatic.com)
 
-## <img alt='storybook' height='20px' src='./images/npm.png'> Instalação
+## <img alt='npm' height='20px' src='./images/npm.png'> Instalação
 
 ``` sh
 npm i rxlib-react
@@ -17,7 +17,7 @@ npm i rxlib-react
 npm run build
 ```
 
-## <img alt='storybook' height='20px' src='./images/lerna.png'> Install in example-app
+## <img alt='lerna' height='20px' src='./images/lerna.png'> Install in example-app
 
 ``` sh
 npx lerna add rxlib-react --scope example-app
