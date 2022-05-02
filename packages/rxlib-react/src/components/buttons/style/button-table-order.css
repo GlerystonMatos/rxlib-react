@@ -1,0 +1,21 @@
+.rxlib-btn-order-table {
+    border: none;
+    margin: 0rem;
+    padding: 0rem;
+    margin-left: 0.3rem;
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-order-table:hover {
+    box-shadow: none;
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-order-table:focus {
+    box-shadow: none;
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-order-table .active {
+    color: var(--rxlib-button-table-order-active);
+}

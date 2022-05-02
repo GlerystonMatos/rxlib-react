@@ -1,0 +1,76 @@
+.table-striped>tbody>tr:nth-of-type(odd) {
+    --bs-table-accent-bg: var(--rxlib-tabela-listrado-rgb-25);
+}
+
+.rxlib-table-overflow {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.rxlib-coluna-acoes {
+    width: 8rem;
+}
+
+.rxlib-coluna-acoes-personalizadas-1 {
+    width: 10rem;
+}
+
+.rxlib-coluna-acoes-personalizadas-2 {
+    width: 12rem;
+}
+
+.rxlib-coluna-acoes-personalizadas-3 {
+    width: 14rem;
+}
+
+.rxlib-coluna-acoes-detalhe {
+    width: 20%;
+}
+
+.rxlib-coluna-acoes-detalhe-personalizadas-1 {
+    width: 25%;
+}
+
+.rxlib-coluna-acoes-detalhe-personalizadas-2 {
+    width: 26%;
+}
+
+.rxlib-coluna-acoes-detalhe-personalizadas-3 {
+    width: 27%;
+}
+
+.rxlib-btn-link-table {
+    border: none;
+    margin: 0rem;
+    padding: 0rem;
+    vertical-align: bottom;
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-link-table:hover {
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-link-table:focus {
+    box-shadow: none;
+    color: var(--rxlib-link);
+}
+
+.rxlib-btn-csv-table {
+    width: 10rem;
+    margin-left: -0.7rem;
+}
+
+@media (min-width: 320px) and (max-width: 413px) {
+
+    .rxlib-coluna-tabela {
+        display: none;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 835px) {
+
+    .rxlib-coluna-tabela {
+        display: none;
+    }
+}

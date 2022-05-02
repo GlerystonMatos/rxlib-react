@@ -22,10 +22,23 @@ import Checkbox from './components/checkbox';
 export * from './components/textarea-label';
 import TextareaLabel from './components/textarea-label';
 
+export * from './components/buttons/button-table-order';
+import ButtonTableOrder from './components/buttons/button-table-order';
+
+export * from './components/table';
+import Table from './components/table';
+
 import { maskValue } from './utils/mask';
+
+import {
+    obterIdButton,
+    TipoFormatacao,
+    formatarPorTipo,
+} from './utils/utilitarios';
 
 export {
     /* components  */
+    Table,
     Button,
     Spinner,
     Checkbox,
@@ -34,6 +47,11 @@ export {
     InputLabel,
     ButtonsCrud,
     TextareaLabel,
-    /* utils  */
+    ButtonTableOrder,
+    /* functions  */
     maskValue,
+    obterIdButton,
+    formatarPorTipo,
+    /* type  */
+    TipoFormatacao,
 };
